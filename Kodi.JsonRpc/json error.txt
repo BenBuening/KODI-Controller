@@ -1,0 +1,16 @@
+﻿{
+    "error": {
+        "code": -32602,
+        "data": {
+            "method": "VideoLibrary.GetMovies",
+            "stack": {
+                "message": "Unexpected additional properties received",
+                "name": "limits",
+                "type": "object"
+            }
+        },
+        "message": "Invalid params."
+    },
+    "id": "1",
+    "jsonrpc": "2.0"
+}

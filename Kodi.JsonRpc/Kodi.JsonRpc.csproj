@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44EF0670-0F18-4BF6-925C-0AD01EDBF7B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kodi.JsonRpc</RootNamespace>
+    <AssemblyName>Kodi.JsonRpc</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="ApiConfig.cs" />
+    <Compile Include="ApiResult.cs" />
+    <Compile Include="AsyncResult.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="GlobalTypes\Addon\Details.cs" />
+    <Compile Include="GlobalTypes\Addon\Responses\GetAddonsResponse.cs" />
+    <Compile Include="GlobalTypes\Addon\Responses\GetAddonDetailsResponse.cs" />
+    <Compile Include="GlobalTypes\Application\Notifications\OnVolumeChangedEventData.cs" />
+    <Compile Include="GlobalTypes\Application\Notifications\OnVolumeChangedEventParams.cs" />
+    <Compile Include="GlobalTypes\Application\Property\Value.cs" />
+    <Compile Include="GlobalTypes\Audio\Details\Album.cs" />
+    <Compile Include="GlobalTypes\Audio\Details\Artist.cs" />
+    <Compile Include="GlobalTypes\Audio\Details\Base.cs" />
+    <Compile Include="GlobalTypes\Audio\Details\Media.cs" />
+    <Compile Include="GlobalTypes\Audio\Details\Song.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetSongsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetSongDetailsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetRecentlyPlayedSongsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetRecentlyPlayedAlbumsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetRecentlyAddedSongsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetRecentlyAddedAlbumsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetGenresResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetArtistsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetArtistDetailsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetAlbumsResponse.cs" />
+    <Compile Include="GlobalTypes\Audio\Responses\GetAlbumDetailsResponse.cs" />
+    <Compile Include="GlobalTypes\Configuration\Configuration.cs" />
+    <Compile Include="GlobalTypes\Configuration\Notifications.cs" />
+    <Compile Include="ApiError.cs" />
+    <Compile Include="GlobalTypes\Files\Responses\GetSourcesResponse.cs" />
+    <Compile Include="GlobalTypes\Files\Responses\GetDirectoryResponse.cs" />
+    <Compile Include="GlobalTypes\Files\Responses\PrepareDownloadResponse.cs" />
+    <Compile Include="GlobalTypes\Global\Enums.cs" />
+    <Compile Include="GlobalTypes\Global\Time.cs" />
+    <Compile Include="GlobalTypes\Gui\Property\Control.cs" />
+    <Compile Include="GlobalTypes\Gui\Property\Skin.cs" />
+    <Compile Include="GlobalTypes\Gui\Property\Value.cs" />
+    <Compile Include="GlobalTypes\Gui\Property\Window.cs" />
+    <Compile Include="GlobalTypes\Item\Details\Base.cs" />
+    <Compile Include="GlobalTypes\Item\Details\Genre.cs" />
+    <Compile Include="GlobalTypes\Library\Details\Genre.cs" />
+    <Compile Include="GlobalTypes\List\Enums.cs" />
+    <Compile Include="GlobalTypes\List\Filter\Rule.cs" />
+    <Compile Include="GlobalTypes\List\Item\All.cs" />
+    <Compile Include="GlobalTypes\List\Item\Base.cs" />
+    <Compile Include="GlobalTypes\List\Item\File.cs" />
+    <Compile Include="GlobalTypes\List\Limits.cs" />
+    <Compile Include="GlobalTypes\List\LimitsReturned.cs" />
+    <Compile Include="GlobalTypes\List\Sort.cs" />
+    <Compile Include="GlobalTypes\Media\ArtWork.cs" />
+    <Compile Include="GlobalTypes\Media\Details\Base.cs" />
+    <Compile Include="GlobalTypes\Player\Audio\Stream.cs" />
+    <Compile Include="GlobalTypes\Player\Audio\StreamExtended.cs" />
+    <Compile Include="GlobalTypes\Player\Enums.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnStopEventData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnSpeedChangedEventData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnSeekEventData.cs" />
+    <Compile Include="GlobalTypes\Notifications\ItemData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnPauseEventData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnPropertyChangedEventParams.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnPlayEventData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\OnPauseEventParams.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\PlayerData.cs" />
+    <Compile Include="GlobalTypes\Player\Notifications\PlayerSeek.cs" />
+    <Compile Include="GlobalTypes\Player\Player.cs" />
+    <Compile Include="GlobalTypes\Player\Property\Value.cs" />
+    <Compile Include="GlobalTypes\Player\Responses\SeekResponse.cs" />
+    <Compile Include="GlobalTypes\Player\Speed.cs" />
+    <Compile Include="GlobalTypes\Player\Subtitle.cs" />
+    <Compile Include="GlobalTypes\Playlist\Enums.cs" />
+    <Compile Include="GlobalTypes\Playlist\Notifications\OnAddEventData.cs" />
+    <Compile Include="GlobalTypes\Playlist\Notifications\OnRemoveEventData.cs" />
+    <Compile Include="GlobalTypes\Playlist\Notifications\OnClearEventData.cs" />
+    <Compile Include="GlobalTypes\Playlist\Property\Value.cs" />
+    <Compile Include="GlobalTypes\Playlist\Responses\Playlist.cs" />
+    <Compile Include="GlobalTypes\Playlist\Responses\GetItemsResponse.cs" />
+    <Compile Include="GlobalTypes\PVR\Details\Channel.cs" />
+    <Compile Include="GlobalTypes\PVR\Details\ChannelGroup.cs" />
+    <Compile Include="GlobalTypes\PVR\Details\ChannelGroupExtended.cs" />
+    <Compile Include="GlobalTypes\PVR\Property\Value.cs" />
+    <Compile Include="GlobalTypes\PVR\Responses\GetChannelsResponse.cs" />
+    <Compile Include="GlobalTypes\PVR\Responses\GetChannelGroupsResponse.cs" />
+    <Compile Include="GlobalTypes\System\Property\Value.cs" />
+    <Compile Include="GlobalTypes\Video\AudioStream.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Cast.cs" />
+    <Compile Include="GlobalTypes\Video\Enums.cs" />
+    <Compile Include="GlobalTypes\Version.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Base.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Episode.cs" />
+    <Compile Include="GlobalTypes\Video\Details\File.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Item.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Media.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Movie.cs" />
+    <Compile Include="GlobalTypes\Video\Details\MovieSet.cs" />
+    <Compile Include="GlobalTypes\Video\Details\MovieSetExtended.cs" />
+    <Compile Include="GlobalTypes\Video\Details\MusicVideo.cs" />
+    <Compile Include="GlobalTypes\Video\Details\Season.cs" />
+    <Compile Include="GlobalTypes\Video\Details\TvShow.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetTVShowsResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetSeasonsResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetMusicVideosResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetMovieSetsResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetGenresResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetEpisodesResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Responses\GetMoviesResponse.cs" />
+    <Compile Include="GlobalTypes\Video\Resume.cs" />
+    <Compile Include="GlobalTypes\Video\Streams.cs" />
+    <Compile Include="GlobalTypes\Video\SubtitleStream.cs" />
+    <Compile Include="GlobalTypes\Video\VideoStream.cs" />
+    <Compile Include="MessagePump.cs" />
+    <Compile Include="Methods\Addons.cs" />
+    <Compile Include="Methods\Application.cs" />
+    <Compile Include="Methods\AudioLibrary.cs" />
+    <Compile Include="Methods\Files.cs" />
+    <Compile Include="Methods\Gui.cs" />
+    <Compile Include="Methods\Input.cs" />
+    <Compile Include="Methods\JsonRpc.cs" />
+    <Compile Include="Methods\Kodi.cs" />
+    <Compile Include="Methods\MethodLibraryBase.cs" />
+    <Compile Include="Methods\Player.cs" />
+    <Compile Include="Methods\Playlist.cs" />
+    <Compile Include="Methods\PVR.cs" />
+    <Compile Include="Methods\System.cs" />
+    <Compile Include="Methods\VideoLibrary.cs" />
+    <Compile Include="NotificationReceivedEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="json allmovies.txt" />
+    <Content Include="json error.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
