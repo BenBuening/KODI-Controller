@@ -157,7 +157,7 @@ namespace Kodi.JsonRpc.Methods
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("playlistid", playlistId);
-            parameters.Add("item", new { episodeId } /*Dictionary<string, object>(1) {["episodeid"] = episodeId }*/);
+            parameters.Add("item", new Dictionary<string, object>(1) {["episodeid"] = episodeId });
 
             return RunAsync("Playlist.Add", parameters);
         }
